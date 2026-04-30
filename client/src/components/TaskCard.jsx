@@ -20,7 +20,7 @@ const TaskCard = ({ task, refreshTasks }) => {
   const deleteTask = async () => {
     if(!window.confirm("Uda du task?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${task._id}`, {
+      await axios.delete(`https://task-manager-production-33e6.up.railway.app/api/tasks/${task._id}`, {
         headers: { 'x-auth-token': token }
       });
       refreshTasks();
