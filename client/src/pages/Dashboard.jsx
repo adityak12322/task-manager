@@ -24,8 +24,8 @@ const Dashboard = () => {
     try {
       const headers = { headers: { 'x-auth-token': token } };
       const [taskRes, userRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/tasks', headers),
-        axios.get('http://localhost:5000/api/auth/users', headers)
+        axios.get('https://task-manager-production-33e6.up.railway.app/api/tasks', headers),
+        axios.get('https://task-manager-production-33e6.up.railway.app/api/auth/users', headers)
       ]);
       setTasks(taskRes.data);
       setMembers(userRes.data.filter(u => u.role === 'member'));
