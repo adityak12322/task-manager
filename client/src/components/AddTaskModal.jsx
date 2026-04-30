@@ -18,7 +18,7 @@ const AddTaskModal = ({ isOpen, onClose, refreshTasks }) => {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5000/api/auth/users', {
+        const res = await axios.get('http:https://task-manager-production-33e6.up.railway.app/api/auth/users', {
           headers: { 'x-auth-token': token }
         });
         setMembers(res.data.filter(u => u.role === 'member'));
