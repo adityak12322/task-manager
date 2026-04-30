@@ -11,7 +11,7 @@ connectDB();
 
 app.use(express.json());
 app.use(cors({
-    origin: ["https://task-manager-lime-mu-34.vercel.app/", "http://localhost:3000"], // Apne Vercel link ko yahan dalo
+    origin: ["https://task-manager-lime-mu-34.vercel.app", "http://localhost:3000"], // Apne Vercel link ko yahan dalo
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
