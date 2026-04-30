@@ -11,7 +11,7 @@ connectDB();
 
 app.use(express.json());
 app.use(cors({
-    origin: "https://task-manager-lngyuz5gp-adityak12322s-projects.vercel.app, // Apne Vercel link ko yahan dalo
+    origin:"https://task-manager-lngyuz5gp-adityak12322s-projects.vercel.app", // Apne Vercel link ko yahan dalo
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
