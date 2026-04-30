@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'task-manager-production-33e6.up.railway.app' });
+const API = axios.create({ baseURL: 'task-manager-production-33e6.up.railway.app/api' });
 
 // Token automatically har request mein bhejne ke liye
 API.interceptors.request.use((req) => {
