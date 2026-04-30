@@ -7,7 +7,7 @@ const Login = ({ onSuccess }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post('http://localhost:5000/api/auth/login', formData);
+            const { data } = await axios.post('https://task-manager-production-33e6.up.railway.app/api/auth/login', formData);
             localStorage.setItem('token', data.token);
             localStorage.setItem('name', data.name);
             localStorage.setItem('role', data.role);
