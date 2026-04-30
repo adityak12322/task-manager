@@ -7,7 +7,7 @@ const Signup = ({ onSuccess }) => {
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post('http://localhost:5000/api/auth/register', formData);
+            const { data } = await axios.post('https://task-manager-production-33e6.up.railway.app/api/auth/register', formData);
             localStorage.setItem('token', data.token);
             localStorage.setItem('name', data.name);
             localStorage.setItem('role', data.role);
